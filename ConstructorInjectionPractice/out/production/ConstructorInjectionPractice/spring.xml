@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="BCoach1" class="com.constructorInjection.BaseballCoach">
+    <constructor-arg  name="ifortune" ref="fortune"/>
+    <constructor-arg index="1" value="Deepanshu"/>
+    <constructor-arg index="2" value="gdeepanshu2013@gmail.com"/>
+    <constructor-arg index="3" value="TeamDeepanshu"/>
+    <constructor-arg name="address" ref="address1"/>
+    </bean>
+
+    <bean id="BCoach2" class="com.constructorInjection.BaseballCoach">
+        <constructor-arg  name="ifortune" ref="fortune"/>
+        <constructor-arg index="1" value="Bhavuk"/>
+        <constructor-arg index="2" value="bhavukvirmani00@gmail.com"/>
+        <constructor-arg index="3" value="TeamBhavuk"/>
+        <constructor-arg name="address" ref="address2"/>
+    </bean>
+
+    <bean id="fortune" class="com.constructorInjection.FortuneBaseball"/>
+
+    <bean id="address1" class="com.constructorInjection.Address">
+        <constructor-arg index="0" value="A-1/141 Sector-11 Rohini"/>
+        <constructor-arg index="1" value="Delhi"/>
+        <constructor-arg index="2" value="Delhi"/>
+        <constructor-arg index="3" value="110085"/>
+    </bean>
+    <bean id="address2" class="com.constructorInjection.Address">
+        <constructor-arg index="0" value="B-4 Sector-7 Rohini"/>
+        <constructor-arg index="1" value="Delhi"/>
+        <constructor-arg index="2" value="Delhi"/>
+        <constructor-arg index="3" value="110085"/>
+    </bean>
+</beans>

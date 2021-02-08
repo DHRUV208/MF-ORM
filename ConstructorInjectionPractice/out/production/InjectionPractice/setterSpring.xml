@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="BCoach" class="com.constructorInjection.BaseballCoach">
+        <property name="name" value="Deepanshu"/>
+        <property name="address" ref="Address"/>
+        <property name="email" value="gdeepanshu2013@gmail.com"/>
+        <property name="ifortune" ref="fortune1"/>
+        <property name="teamName" value="Deepanshu Team"/>
+    </bean>
+    <bean id="Address" class="com.constructorInjection.Address">
+        <constructor-arg index="0" value="A-1/141"/>
+        <constructor-arg index="1" value="Sector-11"/>
+        <constructor-arg index="2" value="Delhi"/>
+        <constructor-arg index="3" value="110085"/>
+    </bean>
+    <bean id="fortune1" class="com.constructorInjection.FortuneBaseball"/>
+</beans>
