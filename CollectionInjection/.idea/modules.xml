@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Multiple-Injections.iml" filepath="$PROJECT_DIR$/Multiple-Injections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollectionInjection.iml" filepath="$PROJECT_DIR$/CollectionInjection.iml" />
     </modules>
   </component>
 </project>

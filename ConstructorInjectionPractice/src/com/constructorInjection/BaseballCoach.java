@@ -7,6 +7,7 @@ public class BaseballCoach implements ICoach {
     private String teamName;
     private Address address;
 
+
     public BaseballCoach(IFortune ifortune, String name, String email, String teamName, Address address) {
         this.ifortune = ifortune;
         this.name = name;
