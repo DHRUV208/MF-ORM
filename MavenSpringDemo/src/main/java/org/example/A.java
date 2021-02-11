@@ -14,6 +14,7 @@ public class A {
     public void setB(B b) {
         System.out.println("In B");
         this.b = b;
+
     }
 
 }
