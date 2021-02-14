@@ -3,9 +3,7 @@ package TightToLooseCoupling;
 import java.util.ResourceBundle;
 
 public class Factory {
-    private static ResourceBundle rb = ResourceBundle.
-
-            getBundle("config");
+    private static ResourceBundle rb = ResourceBundle.getBundle("config");
 
     private Factory() {
     }
