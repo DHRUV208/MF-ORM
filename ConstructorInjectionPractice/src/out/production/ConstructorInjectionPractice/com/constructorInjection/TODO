@@ -1,0 +1,7 @@
+address class - city,house_no, state, pincode
+baseball coach class - Ifortune , name, email, teamName, Address
+Fortune class - getFortune() method
+ICoach Interface - getFortune() , getDailyWorkout()
+IFortune Interface - getFortune()
+MyApp
+Spring.xml

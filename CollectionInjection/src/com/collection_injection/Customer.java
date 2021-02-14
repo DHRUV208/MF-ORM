@@ -20,13 +20,7 @@ public class Customer {
                 '}';
     }
 
-    public Customer(List<String> names, Set<Long> phno, Map<Long, String> aadharNo, Map<Long, Address> address, Properties email) {
-        this.names = names;
-        Phno = phno;
-        this.aadharNo = aadharNo;
-        this.address = address;
-        this.email = email;
-    }
+
 
     public List<String> getNames() {
         return names;

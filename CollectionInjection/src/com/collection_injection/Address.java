@@ -6,12 +6,7 @@ public class Address {
     private String state;
     private String pincode;
 
-    public Address(String city, String house_no, String state, String pincode) {
-        this.city = city;
-        this.house_no = house_no;
-        this.state = state;
-        this.pincode = pincode;
-    }
+
 
     @Override
     public String toString() {
