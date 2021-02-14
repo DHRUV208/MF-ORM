@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AutoWiring/AutoWiring.iml" filepath="$PROJECT_DIR$/AutoWiring/AutoWiring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MavenSpringDemo/MavenSpringDemo.iml" filepath="$PROJECT_DIR$/MavenSpringDemo/MavenSpringDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ORM-Practice.iml" filepath="$PROJECT_DIR$/.idea/ORM-Practice.iml" />
+    </modules>
+  </component>
+</project>
