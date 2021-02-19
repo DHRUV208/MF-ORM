@@ -10,6 +10,7 @@
     <constructor-arg index="3" value="TeamDeepanshu"/>
     <constructor-arg name="address" ref="address1"/>
     </bean>
+    <bean id="fortune" class="com.constructorInjection.FortuneBaseball"/>
 
     <bean id="BCoach2" class="com.constructorInjection.BaseballCoach">
         <constructor-arg  name="ifortune" ref="fortune"/>
@@ -20,7 +21,7 @@
     </bean>
 
 
-    <bean id="fortune" class="com.constructorInjection.FortuneBaseball"/>
+
 
     <bean id="address1" class="com.constructorInjection.Address">
         <constructor-arg index="0" value="A-1/141 Sector-11 Rohini"/>
