@@ -8,7 +8,7 @@ import java.util.Random;
 
 
 @Component("fortuneCoach")
-@Scope("prototype")
+@Scope("singleton")
 public class Fortune implements IFortune{
     String dailyFortune;
 

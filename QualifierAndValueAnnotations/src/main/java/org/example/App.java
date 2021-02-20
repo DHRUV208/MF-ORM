@@ -18,6 +18,7 @@ public class App
         Coach coach2 = context.getBean("Tcoach",Coach.class);
         coach2.getCoachFortune();
         coach2.getDailySchedule();
+        ((ClassPathXmlApplicationContext)context).close();
 
     }
 }

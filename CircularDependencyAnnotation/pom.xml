@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>QualifierAndValueAnnotations</artifactId>
+  <artifactId>CircularDependencyAnnotation</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>QualifierAndValueAnnotations</name>
+  <name>CircularDependencyAnnotation</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -29,11 +29,6 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>5.3.3</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-annotation_1.0_spec</artifactId>
-      <version>1.0</version>
     </dependency>
   </dependencies>
 
