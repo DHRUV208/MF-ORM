@@ -11,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext context = new AnnotationConfigApplicationContext(configApp.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("configApp.class");
 //get the bean
         Coach ccoach = context.getBean("cricketCoach",Coach.class);
         System.out.println(ccoach.getRoutine());
