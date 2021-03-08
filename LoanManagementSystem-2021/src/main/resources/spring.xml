@@ -2,13 +2,7 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="loanProcess" class="org.example.LoanProcess">
-<!--        <property name="customers">-->
-<!--            <list>-->
-<!--                <ref bean="customer1"/>-->
-<!--            </list>-->
-<!--        </property>-->
-    </bean>
+    <bean id="loanProcess" class="org.example.LoanProcess"/>
     <bean scope="prototype" id="customer1" class="org.example.DataEntry.DataEntryClass">
         <property name="personalDetails" ref="personalDetails1"/>
         <property name="loan" ref="loan1"/>

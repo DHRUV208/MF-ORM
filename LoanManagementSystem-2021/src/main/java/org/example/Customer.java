@@ -15,6 +15,8 @@ public interface Customer {
 
     int getId();
 
+    public void setId(Customer customer);
+
     void setIncome(float nextFloat);
 
     void setAssets(float nextFloat);

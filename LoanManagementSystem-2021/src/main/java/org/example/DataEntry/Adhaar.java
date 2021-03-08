@@ -7,8 +7,6 @@ public class Adhaar{
         AdhaarId = adhaarId;
     }
 
-
-
     public boolean adhaarIdcheck()
      {
          return true;

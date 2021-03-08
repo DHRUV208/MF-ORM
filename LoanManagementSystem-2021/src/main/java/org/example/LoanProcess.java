@@ -67,7 +67,7 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
             return;
         }
 
-        customer.setId(customers.size() + 1);
+        customer.setId(customer);
 
         //Adding Customer to ArrayList
         setCustomers(customer);
@@ -91,14 +91,6 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
         return false;
     }
 
-    //Overriding .Equals Function for Comparison
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        LoanProcess that = (LoanProcess) o;
-        return customers.equals(that.customers);
-    }
 
     //Quick Data Entry
     public void qde(Customer customer) {
@@ -107,7 +99,7 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
         Scanner s = new Scanner(System.in);
 
         //Printing Personal Details
-        System.out.println("Application Number" + customer.getId());
+        System.out.println("Application Number: " + customer.getId());
         System.out.println("Name: " + customer.getPersonal().getFname().toUpperCase()
                 + " " + customer.getPersonal().getLname().toUpperCase());
         System.out.println("Age: " + customer.getPersonal().getAge());
@@ -267,7 +259,7 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
     }
 
     public void ApplicationStatus(int applicationNumber) {
-        System.out.println("In Application Number");
+
 
         for (Customer customer : customers) {
             if (applicationNumber == customer.getId()) {

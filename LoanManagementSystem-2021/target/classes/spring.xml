@@ -2,13 +2,7 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="loanProcess" class="org.example.LoanProcess">
-<!--        <property name="customers">-->
-<!--            <list>-->
-<!--                <ref bean="customer1"/>-->
-<!--            </list>-->
-<!--        </property>-->
-    </bean>
+    <bean id="loanProcess" class="org.example.LoanProcess"/>
     <bean scope="prototype" id="customer1" class="org.example.DataEntry.DataEntryClass">
         <property name="personalDetails" ref="personalDetails1"/>
         <property name="loan" ref="loan1"/>
@@ -43,7 +37,9 @@
     <bean scope="prototype" id="pan1" class="org.example.DataEntry.Pan">
         <constructor-arg value="121312312312"/>
     </bean>
-    
+
+<!--    End of Personal Details-->
+
     <bean scope="prototype" id="loan1" class="org.example.Sourcing.Loan">
         <constructor-arg index="0" value="E"/>
         <constructor-arg index="1" value="24"/>
@@ -54,7 +50,7 @@
     <bean scope="prototype" lazy-init="false" id="fraud1" class="org.example.DataEntry.DataEntryClass">
         <property name="personalDetails" ref="fraudDetails1"/>
     </bean>
-    <bean id="fraud2" class="org.example.DataEntry.DataEntryClass">
+    <bean scope="prototype" lazy-init="false" id="fraud2" class="org.example.DataEntry.DataEntryClass">
         <property name="personalDetails" ref="fraudDetails2"/>
     </bean>
     <bean scope="prototype" lazy-init="false" id="fraudDetails1" class="org.example.Sourcing.SourcingData">
@@ -103,7 +99,7 @@
     <bean scope="prototype" id="adhaar3" class="org.example.DataEntry.Adhaar">
         <constructor-arg value="23123123123"/>
     </bean>
-    <bean id="customer2" class="org.example.DataEntry.DataEntryClass"/>
+
 
 
 </beans>

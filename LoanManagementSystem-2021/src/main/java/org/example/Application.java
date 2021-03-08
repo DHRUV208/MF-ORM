@@ -38,7 +38,7 @@ public class Application {
                 case 4 -> System.out.println("Thank you for using Loan Management System");
                 default -> System.out.println("Invalid Choice");
             }
-        } while (choice != 3);
+        } while (choice != 4);
 
 
     }

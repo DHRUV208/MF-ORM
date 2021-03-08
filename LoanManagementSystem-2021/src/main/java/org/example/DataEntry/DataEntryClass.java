@@ -5,6 +5,7 @@ import org.example.Sourcing.Loan;
 import org.example.Sourcing.SourcingData;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class DataEntryClass implements Customer {
@@ -74,6 +75,12 @@ public class DataEntryClass implements Customer {
 
     public void setId(int id) {
         this.id=id;
+    }
+
+    public void setId(Customer customer)
+    {
+        Random random = new Random();
+        this.id = random.nextInt(100);
     }
 
     public int getId() {
