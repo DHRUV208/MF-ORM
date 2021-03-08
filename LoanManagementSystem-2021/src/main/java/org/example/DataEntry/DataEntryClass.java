@@ -1,13 +1,10 @@
 package org.example.DataEntry;
 
 import org.example.Customer;
-import org.example.Sourcing.Address;
 import org.example.Sourcing.Loan;
 import org.example.Sourcing.SourcingData;
 
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
 
 
 public class DataEntryClass implements Customer {
@@ -16,14 +13,19 @@ public class DataEntryClass implements Customer {
     private float assets;
     private float liability;
     private String Education;
-    private Loan loan;
 
-    private SourcingData personalDetails;
     private int id;
     int status;
     String remarks;
-    private ArrayList<Customer> fraudCustomer;
 
+    //Injection of Personal Details
+    private SourcingData personalDetails;
+
+    //Injection of Loan Details
+    private Loan loan;
+
+    //Array List of Fraud Customers
+    private ArrayList<Customer> fraudCustomer;
 
     public ArrayList<Customer> getFraudCustomers() {
         return fraudCustomer;
@@ -33,29 +35,9 @@ public class DataEntryClass implements Customer {
         this.fraudCustomer = fraudCustomer;
     }
 
-    public String getRemarks() {
-        return remarks;
-    }
-
-
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
-    }
-
-
-
-    public Adhaar getAdhaarId()
-    {
-        return personalDetails.getAdhaarId();
-    }
-
     public void setLoan(Loan loan) {
         this.loan = loan;
     }
-
-
-
 
     public Loan getLoan() {
         return loan;
@@ -69,7 +51,18 @@ public class DataEntryClass implements Customer {
         this.personalDetails = personalDetails;
     }
 
+    public String getRemarks() {
+        return remarks;
+    }
 
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public Adhaar getAdhaarId()
+    {
+        return personalDetails.getAdhaarId();
+    }
 
     public int getStatus() {
         return status;
@@ -78,7 +71,6 @@ public class DataEntryClass implements Customer {
     public void setStatus(int status) {
         this.status = status;
     }
-
 
     public void setId(int id) {
         this.id=id;
@@ -121,7 +113,7 @@ public class DataEntryClass implements Customer {
         Education = education;
     }
 
-
+    //Return Actual Income
     public float actualIncome() {
         return ((this.Income + this.assets) - this.liability);
     }

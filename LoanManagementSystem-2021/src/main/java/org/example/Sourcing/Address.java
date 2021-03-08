@@ -1,8 +1,5 @@
 package org.example.Sourcing;
 
-import org.springframework.stereotype.Component;
-
-
 public class Address {
     String houseno;
     String landmark;

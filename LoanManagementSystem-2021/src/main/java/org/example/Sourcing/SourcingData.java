@@ -11,7 +11,6 @@ public class SourcingData {
     int age;
     Long phoneNumber;
     String email;
-    String loanType;
     private Address address;
     Adhaar adhaarId;
     Pan panId;
@@ -33,7 +32,7 @@ public class SourcingData {
         this.age = age;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.loanType = loanType;
+
         this.address = address;
         this.adhaarId = adhaarId;
         this.panId = panId;
@@ -80,13 +79,7 @@ public class SourcingData {
         this.email = email;
     }
 
-    public String getLoanType() {
-        return loanType;
-    }
 
-    public void setLoanType(String loanType) {
-        this.loanType = loanType;
-    }
 
     public Address getAddress() {
         return address;
