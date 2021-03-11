@@ -36,4 +36,8 @@ public interface Customer {
     public ArrayList<Customer> getFraudCustomers();
 
     public void setStatus(int status);
+
+    float getIncome();
+
+    float getLiability();
 }

@@ -15,7 +15,7 @@ public class Application {
         //Manages All the Classes
         //Calls Loan Process Class
         LoanProcessInterface loanProcess = (LoanProcessInterface) context.getBean("loanProcess");
-        Customer customer = (Customer) context.getBean("customer1");
+
         int choice;
         do {
             System.out.println("Welcome to Loan Management System");
@@ -26,7 +26,10 @@ public class Application {
             System.out.print("Enter Your Choice: ");
             choice = sc.nextInt();
             switch (choice) {
-                case 1 -> loanProcess.start(customer);
+                case 1 -> {
+                    Customer customer = (Customer) context.getBean("customer1");
+                        loanProcess.start(customer);
+                }
                 case 2 -> {
                     System.out.print("Enter Application Number: ");
                     loanProcess.ApplicationStatus(sc.nextInt());

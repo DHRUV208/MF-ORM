@@ -103,7 +103,7 @@ public class SourcingData {
         return panId;
     }
 
-    public void setPanId(Long panId) {
+    public void setPanId(String panId) {
         this.panId = new Pan(panId);
     }
 

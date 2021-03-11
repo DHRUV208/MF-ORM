@@ -32,16 +32,17 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
         Scanner sc = new Scanner(System.in);
 
 
+        Validator v = new Validator();
         System.out.print("Enter First name: ");
         customer.getPersonal().setFname(sc.next());
         System.out.print("Enter Last name: ");
         customer.getPersonal().setLname(sc.next());
         System.out.print("Enter Age: ");
-        customer.getPersonal().setAge(sc.nextInt());
+        customer.getPersonal().setAge(v.ageValidator(sc.nextInt()));
         System.out.print("Enter Phone Number: ");
-        customer.getPersonal().setPhoneNumber(sc.nextLong());
+        customer.getPersonal().setPhoneNumber(v.phoneNumberValidator(sc.nextLong()));
         System.out.print("Enter emailId: ");
-        customer.getPersonal().setEmail(sc.next());
+        customer.getPersonal().setEmail(v.emailNumberValidator(sc.next()));
         System.out.println("Enter Address");
 
         // Values for Address
@@ -57,11 +58,11 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
 
         //Aadhaar ID
         System.out.print("Enter AadhaarId: ");
-        customer.getPersonal().setAdhaarId(sc.nextLong());
+        customer.getPersonal().setAdhaarId(v.aadharNumberValidator(sc.nextLong()));
 
         //Pan ID
         System.out.print("Enter PanId: ");
-        customer.getPersonal().setPanId(sc.nextLong());
+        customer.getPersonal().setPanId(v.pancardValidator(sc.next()));
         if (checkExisting(customer)) {
             System.out.println("User Already Exists");
             return;
@@ -97,7 +98,7 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
 
 
         Scanner s = new Scanner(System.in);
-
+        Validator v = new Validator();
         //Printing Personal Details
         System.out.println("Application Number: " + customer.getId());
         System.out.println("Name: " + customer.getPersonal().getFname().toUpperCase()
@@ -113,7 +114,8 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
         System.out.print("Enter Assets: ");
         customer.setAssets(s.nextFloat());
         System.out.print("Enter Liabilities: ");
-        customer.setLiability(s.nextFloat());
+        float totalIncome = customer.getIncome()+customer.getLiability();
+        customer.setLiability(v.invalidLiabilityValidator(totalIncome,s.nextFloat()));
         System.out.print("Enter your Education:" +
                 " Student(S) |" +
                 " Graduated(G) |" +

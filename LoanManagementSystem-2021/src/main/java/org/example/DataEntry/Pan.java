@@ -1,9 +1,9 @@
 package org.example.DataEntry;
 
 public class Pan {
-    Long PanId;
+    String PanId;
 
-    public Pan(Long panId) {
+    public Pan(String panId) {
         PanId = panId;
     }
 
@@ -11,7 +11,7 @@ public class Pan {
         return true;
     }
 
-    public Long getPanId() {
+    public String getPanId() {
         return PanId;
     }
 }
