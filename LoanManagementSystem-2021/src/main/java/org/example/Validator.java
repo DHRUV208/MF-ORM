@@ -4,7 +4,6 @@ import org.example.ExceptionClasses.*;
 import org.example.Sourcing.SourcingData;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
@@ -123,10 +122,7 @@ public class Validator{
     }
 
     public  void emailIDValidation(String email) throws EmailIdValidationException {
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
-                "[a-zA-Z0-9_+&-]+)@" +
-                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                "A-Z]{2,7}$";
+        String emailRegex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
 
         Pattern pat = Pattern.compile(emailRegex);
         if (email == null)
@@ -138,7 +134,7 @@ public class Validator{
 
     public  void aadharNumberValidation(Long adhaar) throws AadharNumberValidationException{
 
-        String regex = "^[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}$";
+        String regex = "^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$";
 
 
         Pattern p = Pattern.compile(regex);
@@ -157,7 +153,7 @@ public class Validator{
 
 
     public  void pancardValidation(String pancardNumber) throws PanNumberValidationException {
-        if (!pancardNumber.matches("[A-Z]{3}[0-9]{4}[A-Z]{1}")) {
+        if (!pancardNumber.matches("[A-Z]{5}[0-9]{4}[A-Z]{1}")) {
             throw new PanNumberValidationException("Invalid Pan Number");
         }
     }

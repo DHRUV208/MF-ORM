@@ -40,4 +40,6 @@ public interface Customer {
     float getIncome();
 
     float getLiability();
+
+    float getAssets();
 }

@@ -31,8 +31,8 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
 
         Scanner sc = new Scanner(System.in);
 
-
         Validator v = new Validator();
+
         System.out.print("Enter First name: ");
         customer.getPersonal().setFname(sc.next());
         System.out.print("Enter Last name: ");
@@ -114,7 +114,7 @@ public class LoanProcess implements LoanProcessInterface, LoanConstants, StageCo
         System.out.print("Enter Assets: ");
         customer.setAssets(s.nextFloat());
         System.out.print("Enter Liabilities: ");
-        float totalIncome = customer.getIncome()+customer.getLiability();
+        float totalIncome = customer.getIncome()+customer.getAssets();
         customer.setLiability(v.invalidLiabilityValidator(totalIncome,s.nextFloat()));
         System.out.print("Enter your Education:" +
                 " Student(S) |" +
