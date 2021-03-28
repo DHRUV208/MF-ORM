@@ -1,12 +1,7 @@
 package org.example;
 
-import org.apache.log4j.BasicConfigurator;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-/**
- * Hello world!
- *
- */
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 public class App 
 {
     public static void main( String[] args )

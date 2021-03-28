@@ -8,18 +8,18 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("org.example")
 public class configApp {
 
-    @Bean IFortune fortune()
-    {
+    @Bean
+    IFortune fortune() {
         return new Fortune();
     }
 
     @Bean
-    public Coach cricketCoach()
-    {
+    public Coach cricketCoach() {
         return new CricketCoach(fortune());
     }
+
     @Bean
-    public CricketCoach ccoach(){
+    public CricketCoach ccoach() {
         return new CricketCoach(fortune());
     }
 

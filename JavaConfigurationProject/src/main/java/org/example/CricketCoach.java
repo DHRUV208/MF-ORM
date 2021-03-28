@@ -1,13 +1,10 @@
 package org.example;
 
-import org.springframework.context.annotation.Bean;
-
-public class CricketCoach implements Coach{
+public class CricketCoach implements Coach {
 
     private IFortune fortune;
 
-    public CricketCoach(IFortune fortune)
-    {
+    public CricketCoach(IFortune fortune) {
         this.fortune = fortune;
     }
 
