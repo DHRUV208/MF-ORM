@@ -11,12 +11,13 @@
     <title>Title</title>
 </head>
 <body>
-<%--<form action="hello">--%>
-<%--    <label>--%>
-<%--        <input type="text" name="t1">--%>
-<%--    </label>--%>
-<%--<input type="submit">--%>
-<%--</form>--%>
+<form action="hello" method="post">
+    <label>
+        <input type="text" name="name">
+        <input type="password" name="password">
+    </label>
+    <button type="submit">Login</button>
+</form>
 <h1>Index Page</h1>
 </body>
 </html>
