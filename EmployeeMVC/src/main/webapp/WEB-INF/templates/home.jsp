@@ -37,16 +37,10 @@
                 <form:input path="password" placeholder="Password" type="password"/>
 
             </div>
-
+            <br>
             <input type="submit" value="Create Account">
         </form:form>
-    </div>
-    <div class= "section" id="right">
-        <div id="image">
-            <img src="resources/images/Design.png" alt="" srcset="">
-        </div>
-    </div>
-    </div>
+
     
 </body>
 </html>

@@ -9,14 +9,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
 <html>
 <head>
-    <head>
+
         <meta charset="UTF-8">
         <title>Title</title>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="resources/style2.css" rel="stylesheet">
-    </head>
+
 </head>
 <body>
 <div class="main">
@@ -30,37 +30,35 @@
         </div>
 
         <br><br>
-        <div>
-            <h3>Welcome ${name}</h3>
-        </div>
+
         <br>
         <div>
-            <h4>Fill Your Details</h4>
+            <h3>You are ready to go!</h3>
         </div>
 
         <br>
-        <form:form action="details" method="post" modelAttribute="ModelAttrib">
+
             <div>
-                <form:input path="fname" placeholder="First Name" type="text"/>
+                <form:input path="fname" placeholder="${fname}" type="text" disabled="true"/>
             </div>
             <div>
-                <form:input path="lname" placeholder="Last Name" type="text"/>
+                <form:input path="lname" placeholder="${lname}" type="text" disabled="true"/>
             </div>
             <div>
-                <form:input path="dob" placeholder="Date of Birth" type="text"/>
+                <form:input path="dob" placeholder="${dob}" type="text" disabled="true"/>
 
             </div>
             <div>
-                <form:input path="about" placeholder="About" type="text"/>
+                <form:input path="about" placeholder="${about}" type="text" disabled="true"/>
 
             </div>
             <div>
-                <form:input path="hobby" placeholder="Hooby" type="text"/>
+                <form:input path="hobby" placeholder="${hobby}" type="text" disabled="true"/>
 
             </div>
             <br>
-            <input type="submit" value="Submit">
-        </form:form>
+
+
     </div>
     <div class= "section" id="right">
         <div id="image">
