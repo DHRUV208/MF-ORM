@@ -64,7 +64,7 @@
     </div>
     <div class= "section" id="right">
         <div id="image">
-            <img src="resources/images/Design.png" alt="" srcset="">
+            <img src="resources/images/Design.png" alt="hello" srcset="">
         </div>
     </div>
 </div>

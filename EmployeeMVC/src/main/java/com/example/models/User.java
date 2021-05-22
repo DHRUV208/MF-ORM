@@ -1,5 +1,7 @@
 package com.example.models;
 
+import javax.validation.constraints.Size;
+
 public class User {
     String name;
     String password;
